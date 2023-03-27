@@ -1,0 +1,11 @@
+{% block title %} Delete post {% endblock title %}
+
+{% block content %}
+<h1>Delete post</h1>
+<p>Do you want to delete "{{post.title}}"?</p>
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" class="btn btn-primary" value="Confirm"> 
+</form>
+{% endblock content %}
